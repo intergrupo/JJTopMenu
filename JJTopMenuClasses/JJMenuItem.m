@@ -102,13 +102,17 @@
         
         _badge = [[LKBadgeView alloc] initWithFrame:CGRectMake(5, 5, 35, 30)];
         [_button addSubview:_badge];
+        _badge.badgeColor = [UIColor redColor];
+        _badge.outline = YES;
+        _badge.outlineColor = [UIColor whiteColor];
+        _badge.widthMode = LKBadgeViewWidthModeSmall;
         
         //Setting the badge value
         if (badgeValue != nil && ![badgeValue isEqualToString:EmptyString]) {
             _badge.text = badgeValue;
             _badge.horizontalAlignment = LKBadgeViewHorizontalAlignmentRight;
-            _badge.widthMode = LKBadgeViewWidthModeStandard;
-            _badge.badgeColor = [UIColor redColor];
+            
+            
         }
         
     }
